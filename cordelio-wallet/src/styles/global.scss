@@ -1,0 +1,39 @@
+@use 'tokens';
+
+html,
+body,
+#root {
+  width: var(--popup-width);
+  max-width: 100%;
+  margin: 0;
+}
+
+html,
+body {
+  max-height: 600px;
+  overflow: auto;
+}
+
+body {
+  font: 16px/145% var(--font);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 560px;
+  background: var(--bg);
+}
+
+h1,
+p,
+button {
+  font-family: var(--font);
+}
+
+h1 {
+  color: var(--text-strong);
+}

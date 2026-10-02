@@ -38,34 +38,42 @@ Parola ile şifreli kasa tasarımı ilk günden bellidir. Kriptografik algoritma
 
 ## 3. Ana yapılacaklar
 
-İlerleme: **1 / 36**
+İlerleme: **18 / 36**
 
 ### A. Proje kurulumu
 
-- [ ] GitHub reposunu oluştur
+- [x] GitHub reposunu oluştur
 - [x] React + TypeScript + Vite kur
-- [ ] Chrome Manifest V3 altyapısını ekle
-- [ ] Popup ekranını oluştur
-- [ ] Service worker ve mesajlaşmayı kur
-- [ ] SCSS tema ve temel bileşenleri hazırla
+- [x] Chrome Manifest V3 altyapısını ekle
+- [x] Popup ekranını oluştur
+- [x] Service worker ve mesajlaşmayı kur
+- [x] SCSS tema ve temel bileşenleri hazırla
+
+
 
 ### B. Cüzdan ve güvenli kasa
 
-- [ ] Cüzdan oluşturma akışı
-- [ ] Kurtarma ifadesi üretme ve doğrulama
-- [ ] Kurtarma ifadesiyle cüzdanı içe aktarma
-- [ ] Parola belirleme ve kasa kilidini açma
-- [ ] Şifreli yerel depolama
-- [ ] Otomatik kilitleme ve kasa temizleme testleri
+Oluşturma, içe aktarma, parola, şifreli saklama ve 5 dakikalık otomatik kilit var. Kilit yalnızca bellekteki açık oturumu kapatır; şifreli kayıt durur.
+
+- [x] Cüzdan oluşturma akışı
+- [x] Kurtarma ifadesi üretme ve doğrulama
+- [x] Kurtarma ifadesiyle cüzdanı içe aktarma
+- [x] Parola belirleme ve kasa kilidini açma
+- [x] Şifreli yerel depolama
+- [x] Otomatik kilitleme ve kasa temizleme testleri
+
+
 
 ### C. Blockchain bağlantısı
 
-- [ ] Ethereum adresini türetme
-- [ ] Sepolia RPC bağlantısı
-- [ ] ETH bakiyesini okuma
-- [ ] Gas ücreti tahmini
-- [ ] Test ETH gönderme
-- [ ] İşlem hash ve durum ekranı
+- [x] Ethereum adresini türetme
+- [x] Sepolia RPC bağlantısı
+- [x] ETH bakiyesini okuma
+- [x] Gas ücreti tahmini
+- [x] Test ETH gönderme
+- [x] İşlem hash ve durum ekranı
+
+
 
 ### D. Cüzdan özellikleri
 
@@ -76,6 +84,8 @@ Parola ile şifreli kasa tasarımı ilk günden bellidir. Kriptografik algoritma
 - [ ] Hesapları yönetme
 - [ ] Hata ve bağlantı durumları
 
+
+
 ### E. dApp bağlantısı
 
 - [ ] EIP-1193 provider
@@ -85,6 +95,8 @@ Parola ile şifreli kasa tasarımı ilk günden bellidir. Kriptografik algoritma
 - [ ] Ağ değiştirme ve olaylar
 - [ ] EIP-6963 cüzdan keşfi
 
+
+
 ### F. Yayına hazırlık
 
 - [ ] Birim ve entegrasyon testleri
@@ -93,61 +105,3 @@ Parola ile şifreli kasa tasarımı ilk günden bellidir. Kriptografik algoritma
 - [ ] Bağımsız güvenlik incelemesi
 - [ ] Chrome Web Store materyalleri
 - [ ] Kontrollü beta ve yayın
-
-## 4. Gün gün plan
-
-Her gün tek bir hedef vardır. Güvenlik ve test adımları geçilmeden sonraki aşamaya geçilmez.
-
-### Sprint 1
-
-#### Gün 1 — Repo ve proje kurulumu
-
-Vite, React, TypeScript, Git, ilk commit ve klasör yapısı.
-
-**Çıktı:** Çalışan proje
-
-#### Gün 2 — Chrome eklentisi
-
-Manifest V3, popup, ikonlar ve Chrome'a yükleme.
-
-**Çıktı:** Açılan eklenti
-
-#### Gün 3 — Eklenti mimarisi
-
-Service worker, mesajlaşma ve modüller arası iletişim.
-
-#### Gün 4 — Arayüz
-
-Cüzdan ana ekranı, SCSS değişkenleri, responsive popup.
-
-#### Gün 5 — Test altyapısı
-
-Vitest, lint, temel testler ve GitHub Actions.
-
-#### Gün 6 — Wallet Core tasarımı
-
-Adres, hesap, ağ ve kasa tipleri; güven sınırlarının belirlenmesi.
-
-#### Gün 7 — Adres üretimi
-
-Test vektörleriyle adres türetme ve doğrulama.
-
-#### Gün 8 — Kurtarma akışı
-
-Kurtarma ifadesi gösterimi, onay ve içe aktarma arayüzü.
-
-#### Gün 9 — Şifreli kasa
-
-Parola, anahtar türetme, şifreleme ve çözme testleri.
-
-#### Gün 10 — Güvenlik kontrolü
-
-Yanlış parola, kilitleme, veri temizliği ve hata senaryoları.
-
-## 5. Bugünkü kapsam
-
-Bugün yalnızca projeyi ayağa kaldırmak. Kurtarma ifadesi, özel anahtar veya gerçek para ile ilgili işlem yok.
-
-Vite projesi kuruldu. Sıradaki iş, klasör iskeletini bağlamak. Chrome eklentisi 2. günün işi.
-
-Manifest V3 service worker'ı sürekli çalışan bir Node.js sunucusu gibi değildir. State, global değişkenlerde tutulmayacak şekilde tasarlanır.

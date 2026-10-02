@@ -1,0 +1,227 @@
+.wallet {
+  box-sizing: border-box;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 12px;
+}
+
+.wallet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+}
+
+.brand {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.network {
+  margin: 0;
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-strong);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.wallet-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+
+  &--flow {
+    justify-content: flex-start;
+    min-height: 0;
+    overflow: auto;
+    padding-top: 18px;
+  }
+}
+
+.wallet-main h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.wallet-main p {
+  margin: 8px 0 0;
+  max-width: 32ch;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wallet-button {
+  flex: 1 1 140px;
+  min-height: 40px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  &--primary {
+    background: var(--accent);
+    color: var(--accent-text);
+  }
+
+  &--secondary {
+    background: var(--surface);
+    color: var(--text-strong);
+    border-color: var(--border);
+  }
+}
+
+.words {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    padding: 6px 8px;
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text-strong);
+    font-size: 13px;
+  }
+
+  span {
+    color: var(--text);
+    font-size: 11px;
+    min-width: 1.2em;
+  }
+}
+
+.wrote,
+.checks label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+  color: var(--text-strong);
+  font-size: 13px;
+}
+
+.checks {
+  display: grid;
+  gap: 8px;
+
+  label {
+    align-items: stretch;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--text-strong);
+    font: inherit;
+    resize: vertical;
+  }
+}
+
+.form-error {
+  margin: 0;
+  color: var(--accent);
+  font-size: 13px;
+}
+
+.balance {
+  margin: 8px 0 0;
+  color: var(--text-strong);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.balance-note {
+  margin: 8px 0 0;
+  font-size: 12px;
+}
+
+.tx-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--accent);
+  font-size: 13px;
+}
+
+.address {
+  margin: 8px 0 0;
+  color: var(--text-strong);
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.wallet-button:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.wallet-foot {
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+}
+
+@media (max-width: 340px) {
+  .wallet-header {
+    align-items: flex-start;
+  }
+
+  .wallet-main h1 {
+    font-size: 22px;
+  }
+}
